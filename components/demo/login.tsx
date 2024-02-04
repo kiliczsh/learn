@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { Separator } from "@/components/ui/separator";
 
 export default function Login() {
     return (
@@ -18,9 +19,9 @@ export default function Login() {
                     <Badge>GitHub</Badge>
                 </div>
                 <div className="flex items-center">
-                    <hr className="flex-grow border-muted-foreground" />
-                    <p className="text-muted-foreground px-4">or</p>
-                    <hr className="flex-grow border-muted-foreground" />
+                    <Separator className="flex-grow border-muted-foreground w-1/3" />
+                    <Label className="text-muted-foreground pr-2 pl-2">or</Label>
+                    <Separator className="flex-grow border-muted-foreground w-1/3" />
                 </div>
             </div>
             <div className="p-6 pt-0 space-y-4">
