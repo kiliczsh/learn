@@ -1,9 +1,9 @@
-import { Badge } from "@/components/ui/badge";
+import Login from "@/components/login";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Badge>page.tsx</Badge>
+    <main className="flex flex-col w-auto items-center justify-between p-4 md:p-24">
+      <Login />
     </main>
   );
 }

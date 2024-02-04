@@ -1,0 +1,39 @@
+import { Badge } from "@/components/ui/badge";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+export default function Login() {
+    return (
+        <div className="rounded-lg border w-full md:w-1/2">
+            <div className="flex flex-col p-6 space-y-2">
+                <Label>Login</Label>
+                <Label className="text-sm text-muted-foreground">Please login to your account.</Label>
+            </div>
+            <div className="p-6 pt-0 grid gap-4">
+                <div className="grid grid-cols-2 gap-4">
+                    <Badge>Google</Badge>
+                    <Badge>GitHub</Badge>
+                </div>
+                <div className="flex items-center">
+                    <hr className="flex-grow border-muted-foreground" />
+                    <p className="text-muted-foreground px-4">or</p>
+                    <hr className="flex-grow border-muted-foreground" />
+                </div>
+            </div>
+            <div className="p-6 pt-0 space-y-4">
+                <div className="grid gap-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input type="email" id="email" />
+                </div>
+                <div className="grid gap-2">
+                    <Label htmlFor="password">Password</Label>
+                    <Input type="password" id="password" />
+                </div>
+                <div className="flex items-center">
+                    <Button className="w-full">Login</Button>
+                </div>
+            </div>
+        </div>
+    );
+}
