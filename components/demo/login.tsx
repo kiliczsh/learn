@@ -1,7 +1,9 @@
+"use client";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 
 export default function Login() {
     return (
@@ -31,7 +33,17 @@ export default function Login() {
                     <Input type="password" id="password" />
                 </div>
                 <div className="flex items-center">
-                    <Button className="w-full">Login</Button>
+                    <Button onClick={() => toast("Logged in succesfully",{
+                        description: "You have been logged in",
+                        action: {
+                            label: "Undo",
+                            onClick: () => toast("Undoing login")
+                        },
+                        cancel: {
+                            label: "Dismiss",
+                            onClick: () => toast("Dismissed")
+                        }
+                    })} className="w-full toaster">Login</Button>
                 </div>
             </div>
         </div>
